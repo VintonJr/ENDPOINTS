@@ -1,19 +1,27 @@
 const express = require('express');
 
 const { router } = require('./routes/users')
+const app = express()
+
+
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 const port = 4000
 
-const server = express()
 
-server.use('/', router)
 
-server.use('/users', router)
 
-server.use('/users/:email', router)
 
-server.use('/login', router)
+app.use('/', router)
 
-server.listen(port, () => {
+app.use('/users', router)
+
+app.use('/users/:email', router)
+
+app.use('/login', router)
+
+app.listen(port, () => {
     console.log(`Running at http://localhost:${port}`)
 })
