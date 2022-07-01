@@ -7,7 +7,7 @@ GET http://localhost:4000/users
 ###
 
 
-GET http://localhost:4000/user/ibax8@ycombinator.com
+GET http://localhost:4000/user/lcumming4@si.edu
 ###
 
 
@@ -17,4 +17,13 @@ Content-Type: application/json
 {
     "email":"ccarrattd@trellian.com",
     "Password":"uZacSZf"
+}
+###
+
+POST http://localhost:4000/createuser
+Content-Type: application/json
+
+{
+ "id":6,"first_name":"Liam","last_name":"Vearnals","email":"lvearnals5@sina.com.cn","gender":"Male","Password":"3sNXRgyZ0"
+
 }
